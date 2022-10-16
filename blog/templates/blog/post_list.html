@@ -5,12 +5,18 @@
     <body>
         <div>
             <h1><a href="/">ANDRESSA ANICETO EU TE AMO</a></h1>
-
+                <h2>{{posts}}</h2>
         </div>
 
         <div> 
+            {% for post in posts%}
+            <div>
+                <p>published: {{ post.created_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text}}</p>
+            </div>
+            {% endfor %}
             
-                {{post}}
             
             
         </div>
