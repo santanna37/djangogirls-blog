@@ -6,10 +6,8 @@ from django.utils import timezone
 # Create your views here.
 #camando o html da inicial 
 def post_list(request):
-    posts =Post.objects.filter(
-        published_dete__lte=timezone.now()).order_by('published_date')
-    
-    return render(request, 'blog/post_list.html',{'post':posts})
+    posts = Post.objects.order_by('published_date')
+    return render(request, 'blog/post_list.html',{'posts':post})
 
 # =================
 # power query para ordenar os comentários 
